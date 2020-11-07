@@ -36,6 +36,15 @@ describe('Game of life', () => {
 		expect(cell.countAliveNeightbour()).toBe(3);
 		expect(cell.isAlive()).toBeTruthy();
 	});
+
+	it('Should alive cell with 2 alive neightbours keep alive', () => {
+		let cell = getCell();
+		cell.addNeightbour(new Cell());
+		cell.addNeightbour(new Cell());
+			
+		expect(cell.countAliveNeightbour()).toBe(2);
+		expect(cell.isAlive()).toBeTruthy();
+	});
 });
 
 function getCell() {

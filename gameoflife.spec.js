@@ -60,7 +60,9 @@ class Cell {
 	}
 
 	isAlive() {
-		return this.countAliveNeightbour() == 3 ? true : false
+		if (this.countAliveNeightbour() == 3) return true
+		if (this.countAliveNeightbour() == 2) return true
+		return false
 	}
 
 	countAliveNeightbour() {

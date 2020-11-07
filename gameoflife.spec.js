@@ -6,6 +6,11 @@ describe('Game of life', () => {
 	it('Should cell with 8 alive neightbours is dead', () => {
 		expect(getCell().isAlive()).toBeFalsy();
 	});
+
+	it('Should cell with 3 alive neightbours is alive', () => {
+		expect(getCell().countAliveNeightbour()).toBe(3);
+		expect(getCell().isAlive()).toBeTruthy();
+	});
 });
 
 function getCell() {

@@ -13,6 +13,9 @@ function getCell() {
 }
 
 class Cell {
+	isAlive() {
+		return false
+	}
 
 	countAliveNeightbour() {
 		return 8;

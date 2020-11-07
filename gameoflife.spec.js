@@ -3,3 +3,14 @@ describe('Game of life', () => {
         expect(getCell().countNeightbour()).toBe(8);
     });
 });
+
+function getCell() {
+	return new Cell();
+}
+
+class Cell {
+
+	countNeightbour() {
+		return 8;
+	}
+}
